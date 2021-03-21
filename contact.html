@@ -76,7 +76,7 @@
         </div>
         <!-- Header End -->
     </header>
-    <main>
+    <main >
 
         <!-- Hero Start -->
         <div class="slider-area ">
@@ -101,7 +101,7 @@
         <!-- Hero End -->
 
                 </div>
-                <div class="row">
+                <div class="row container">
                     <div class="col-12">
                         <h2 class="contact-title">Get in Touch</h2>
                     </div>
@@ -130,7 +130,7 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button id="submit" class="button button-contactForm boxed-btn" onclick="sendRequest()">Send</button>
                             </div>
                         </form>
                     </div>
@@ -152,7 +152,7 @@
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>support@colorlib.com</h3>
+                                <h3>dev.mohib@gmail.com</h3>
                                 <p>Send us your query anytime!</p>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
                             <div class="footer-top-cap text-center">
                                 <img src="assets/img/logo/logo2_footer.png" alt="">
                                <span><a href="#">dev.mohib@gmail.com</a></span>
-                                <p>8km Raiwind Road, Near The Green InternationalUniversity </p>
+                                <p>8km Raiwind Road, Near The Green International University </p>
                                 <p>Lahore, Pakistan - 57220</p>
                             </div>
                        </div>
@@ -246,3 +246,31 @@
     </body>
     
 </html>
+
+<script>
+    const name = document.getElementById("name")
+    const email = document.getElementById("email")
+    const message = document.getElementById("message")
+    const subject = document.getElementById("subject")
+    const submit = document.getElementById("submit")
+
+
+    function sendRequest() {
+        submit.innerHTML = "Sending..."
+        const data = {
+            name : name.value ?  name.value : '',
+            email : email.value ? email.value : '',
+            message : message.value ? message.value :'',
+            subject : subject.value ? subject.value : ''
+        }
+        if(name.value === '' || email.value === '' || message.value === '' || subject.value === '')
+        {
+            console.log("Enter valid data")
+            return
+        }
+
+        submit.innerHTML = "Success"
+
+    }
+
+</script>

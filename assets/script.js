@@ -11,7 +11,7 @@ mainContent.map((content, index) => {
                             <div class="col-lg-5 col-md-5 col-sm-5">
                                 <!-- Single -->
                                 <div class="single-services mb-30">
-                                    <img height="350" src="assets/img/service/services1.png" alt="">
+                                    <img height="250" width="400" src="${content.images[0]}" alt="" style="background-image : cover">
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-7 col-sm-7">
